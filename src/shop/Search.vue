@@ -2,9 +2,7 @@
 	<!--搜索主界面-->
 	<div class="root">
 		<div class="header">
-		<div class="search">
-<!-- 			<img :src="src"/>
- -->		搜索你想要的</div>
+		<div class="search">搜索你想要的</div>
 	</div>
 	   <div class="categoryarea">
 		 <div class="find">
@@ -37,7 +35,6 @@
 			return{
 				selected:0,
 				img:require("@/assets/search/langman.jpg"),
-				// src:require("@/assets/search/搜索.jpg"),
 				categories:[
 					{name:"百货"},
 					{name:"百货"},
@@ -124,7 +121,7 @@
 			margin-top:1rem;
 		}
 		.tu{
-            margin:1.2rem 1.2rem 0  1.2rem;
+            margin:1rem 1rem ;
 			width:28rem;
 			height:10rem;
 			display:inline-block;
@@ -143,15 +140,15 @@
 		   float:right;
 		 
 	  }
-		.category {
+		ul.category {
 			height:calc(11 * 5.4rem);
 			overflow-y: scroll;
-			width:9.9rem;
+			width:25%;
 		}
 		.category li{
-			line-height:5.6rem;
-			width:9.9rem;
-			line-height:5.4rem;
+			line-height:3rem;
+			width:100%;
+			line-height:3rem;
 			text-align:center;
 			background:rgb(248,248,248);
 			font-size:1.6rem;
@@ -159,6 +156,7 @@
 		.category li.selected{
 			color:red;	
 			position: relative;
+			background-color:white;
 		}
 		.category li.selected:before{
 			width:2px;
@@ -172,17 +170,17 @@
 			transform: translateY(-50%);
 		}
 		.categorylist {
+			background-color:white;
 			display:flex;
 			flex-wrap: wrap;/*换行*/
-			width:calc(100% - 9.9rem);
+			width:75%;
 		}
 		.categorylist li{
-			width:calc(100%/3);
+			width:30%;
 		    display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			margin: 1rem 0;
 			font-size:1.3rem;
 		}
 		.categorylist li img{

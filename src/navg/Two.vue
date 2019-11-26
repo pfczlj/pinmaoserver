@@ -1,23 +1,26 @@
 <template>
-	<div>
-	<div class="two">女装</div>
-	<cloth></cloth>
+	<div class="two">
+	 <cloth></cloth> 
+	 <goodslist></goodslist>
 	</div>
 </template>
 
 <script>
 	import cloth from "@/components/navg/Clothes"
+	import goodslist from "@/components/navg/Goods"
 	export default{
 		name:"two",
 		components:{
-			cloth
+			cloth,
+			goodslist
 		}
 	}
 </script>
 
 <style>
-	.two{
-	margin-top:4.3rem;
-	position: fixed;
-	font-size:20px;}
+.two{
+width:100%;
+height:100%;
+background-color: rgb(244,244,244);
+	}
 </style>

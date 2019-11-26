@@ -2,11 +2,26 @@
 	<!--首英：第四部分 商品列表-->
 	<ul class="productList">
 		<li v-for="(product,index) in products" :key="index">
+			<!--图片-->
+			<div class="tp">
 			<img :src="product.imgPath"/>
+			</div>
+			<!--描述-->
 			<div class="des">
-				<span class="name">{{product.name}}</span>
-				<span class="productPrice">
-					<em class="price">¥{{product.price}}</em>已拼{{product.saled}}万+件</span>
+				<div class="tag">
+				<img src="@/assets/shoplist/jw.jpg" />
+				<span>{{product.name}}</span>
+				</div>
+				<span class="pds">{{product.des}}</span>
+		
+				<span class="rank">{{product.ranking}}
+					<span>&nbsp{{product.postage}}</span>
+				</span>
+				
+				<span class="price">
+				¥{{product.price}}
+				<span class="saled">已拼{{product.saled}}万+件</span>
+				</span>
 			</div>
 		</li>
 		<hr/>
@@ -19,29 +34,30 @@
 		data:function(){
 			return{
 		products:[
-         {imgPath:require("@/assets/shoplist/1.gif"),
-			name:"正宗螺蛳粉",
-			price:9.9,
-			salced:100000,
+         {imgPath:require("@/assets/shoplist/cs.jpg"),
+			name:"秋冬季新款男士加绒保暖衬衫长袖中老年格子衬衫",
+			des:"奕辰服饰专营店",
+			ranking:"本周男衬衫畅销前十",/* 排名 */
+			postage:"退货包运费险",
+			price:"29.9",
+			saled:100000,
 			},
-		{
-			imgPath:require("@/assets/shoplist/2.gif"),
-			name:"南极人正品",
-			price:9.9,
-			salced:100000,
-			},
-			{
-			imgPath:require("@/assets/shoplist/3.gif"),
-			name:"9600防尘口罩",
-			price:9.9,
-			salced:100000,
-			},
-			{
-			imgPath:require("@/assets/shoplist/4.gif"),
-			name:"儿童凹槽练字",
-			price:9.9,
-			salced:100000,
-			},	]
+			{imgPath:require("@/assets/shoplist/cs.jpg"),
+						name:"秋冬季新款男士加绒保暖衬衫长袖中老年格子衬衫",
+						des:"奕辰服饰专营店",
+						ranking:"本周男衬衫畅销前十",/* 排名 */
+						postage:"退货包运费险",
+						price:"29.9",
+						saled:100000,
+						},
+			{imgPath:require("@/assets/shoplist/cs.jpg"),
+						name:"秋冬季新款男士加绒保暖衬衫长袖中老年格子衬衫",
+						des:"奕辰服饰专营店",
+						ranking:"本周男衬衫畅销前十",/* 排名 */
+						postage:"退货包运费险",
+						price:"29.9",
+						saled:100000,
+						}			]
 			}
 		},
 		mounted:function(){
@@ -56,56 +72,76 @@
 	}
 </script>
 
-<style scoped>
+<style>
 	.productList {
      width:100%;
 	 margin-top:10px;
 	 background:white;
+	 overflow-y:scroll;
 	}
 	.productList li{
-		 width:100%;
-		 height:18.5rem;
-		 display:flex;/* 水平放着 */
-	     margin-top:10px;
-	    border-bottom:1px solid gainsboro;
+	width:100%;
+	height:176px;
+	}
+	.tp{
+	width:47%;
+	height:100%;
+	}
+	.tp img{
+		display:inline-block;
+		width:156px;
+		height:156px;
+		margin:10px 10px;
 	}
 	
-	.productList li img{
-		width:17.2rem;
-		height:17.2rem;
-		padding:5px 8px 8px 10px;
+	 li .des{
+		 width:53%;
+		 height:156px;
+         margin:10px 0;
 	}
-	 .des {
-		display: flex;
-		flex-direction:column;
-		justify-content: space-between;
-		font-size:1.7rem;
-		padding:8px;
+	/* 放在同一行 */
+	.tp,.des{
+	float:left;
 	}
-   .des .name{
-	  height:4rem;
-	  display:flex;
-	  flex-wrap: wrap;
-      font-size:1.7rem;
-	  font-weight: bold;
-	  line-height:3rem;
-	  margin:8px 0 0 10px;
-	  color:#151516;
-	   width:210px;
-	 }
-	  .productPrice{
-		  width:200px;
-		  height:2rem;
-		  line-height:2rem;
-		  color:#9c9c9c;
-		  font-size:1.6rem;
-	  }
-	
-	 .price{
-		font-size:1.9rem;
-		color:#e02e24;
-		font-weight:800;
-		margin-right:10px;
+    .des  .tag{
+	width:100%;
+	height:40px;
 	}
-	
+	div.tag img{
+		display:inline-block;
+		width:50px;
+		height:16px;
+		float:left;
+
+	}
+	div.tag span{
+	font-size:13px;
+	overflow:hidden;	
+	height:20px;
+	line-height:20px;
+	color:#151516;
+	}
+    .pds{
+		width:100px;
+		color:#9c9c9c;
+		text-align:left;
+	}
+	.rank{
+		margin-top:30px;
+		width:190px;
+		color:rgb(255, 87, 6);
+		font-size:10px;
+	}
+	.price{
+	width:190px;	
+	font-size:14px;
+	color: #e02e24;
+	font-weight:600;
+	}
+	.saled{
+		margin-left:10px;
+		width:50px;
+		font-size:13px;
+		color:#9c9c9c;
+	}
 </style>

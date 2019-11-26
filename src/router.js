@@ -13,6 +13,7 @@ import chart from "./shop/Chart"
 //二级页面
 import one from "./navg/One"
 import two from "./navg/Two"
+import three from "./navg/Three"
 //拼猫后台系统界面
 import category from "@/components/admin/Category"
 import product from "@/components/admin/Product"
@@ -84,13 +85,17 @@ var router = new Router({
 		  path:"/navg",
 		  name:"navg",
 		  component:navg,
-		  children:[{
+		  children:[
+			  {
 					path: "one",
 					component:one,
 				},
 				{ path: "two",
 					component: two,
-				},			  
+				},	
+				{ path: "three",
+					component: three,
+				},							  
 		  ]
 		}
 	]

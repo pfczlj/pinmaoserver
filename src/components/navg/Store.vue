@@ -1,6 +1,6 @@
 <template>
 	<div class="cloth">
-		<!--衣服列表-->
+		<!--百货列表-->
 		<ul class="des">
 			<li  v-for="(cloth,index) in clothes" :key="index">
 			<img :src="cloth.path"/>
@@ -9,9 +9,9 @@
 		</ul>
 	
 		<!--排行榜-->
-			<img class="phb" src="@/assets/navg/women.jpg" />
+			<img class="phb" src="@/assets/store/bh.jpg" />
 		<!--冬装大牌-->
-			<img class="dp" src="@/assets/navg/go.jpg" />
+			<img class="dp" src="@/assets/store/wz.jpg" />
 		<!--商品列表-->
 	    <!--goods-->
 	</div>
@@ -19,35 +19,35 @@
 
 <script>
 	export default{
-		name:"cloth",
+		name:"store",
 		data:function(){
 		return{
 		clothes:[
-		{ path:require("@/assets/navg/1.jpg"),
-		  title:"风衣"		
+		{ path:require("@/assets/store/store1.jpg"),
+		  title:"卫生纸"		
 		},
-		{ path:require("@/assets/navg/2.jpg"),
+		{ path:require("@/assets/store/store2.jpg"),
 		  title:"连衣裙"		
 		},
-		{ path:require("@/assets/navg/3.jpg"),
+		{ path:require("@/assets/store/store3.jpg"),
 		  title:"牛仔裤"		
 		},
-		{ path:require("@/assets/navg/4.jpg"),
+		{ path:require("@/assets/store/store4.jpg"),
 		  title:"牛仔外套"		
 		},
-		{ path:require("@/assets/navg/5.jpg"),
+		{ path:require("@/assets/store/store5.jpg"),
 		  title:"打底衫"		
 		},
-		{ path:require("@/assets/navg/1.jpg"),
+		{ path:require("@/assets/store/store6.jpg"),
 		  title:"风衣"		
 		},
-		{ path:require("@/assets/navg/2.jpg"),
+		{ path:require("@/assets/store/store7.jpg"),
 		  title:"连衣裙"		
 		},
-		{ path:require("@/assets/navg/3.jpg"),
+		{ path:require("@/assets/store/store8.jpg"),
 		  title:"牛仔裤"		
 		},
-		{ path:require("@/assets/navg/4.jpg"),
+		{ path:require("@/assets/store/store9.jpg"),
 		  title:"牛仔外套"		
 		},
 		{ path:require("@/assets/navg/more.png"),
@@ -84,8 +84,8 @@
 	 margin:10px 0;
 	}
 	.des img{
-		width:80px;
-		height:80px;
+		width:70px;
+		height:70px;
 		display:inline-block;
 	}
 	.des li:last-child img{
